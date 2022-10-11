@@ -13,6 +13,9 @@ public Elevator(String badge){
 }
     public Integer[] activeButtons(int currentLevel) {
         List<Integer> List = new ArrayList<>();
+        if(badge == null){
+            List.add(0);
+        }
         Integer[] activebuttons = List.toArray(new Integer[0]);
         return activebuttons;
 }

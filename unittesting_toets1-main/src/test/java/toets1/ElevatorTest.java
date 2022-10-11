@@ -10,6 +10,6 @@ class ElevatorTest {
 void emptyBadge() {
     Elevator elevator = new Elevator(null);
     Integer[] result = elevator.activeButtons(0);
-    assertArrayEquals(new Integer[]{}, result);
+    assertArrayEquals(new Integer[]{0}, result);
 }
 }
