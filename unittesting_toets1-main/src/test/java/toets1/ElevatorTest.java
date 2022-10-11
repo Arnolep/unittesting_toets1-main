@@ -12,4 +12,10 @@ void emptyBadge() {
     Integer[] result = elevator.activeButtons(0);
     assertArrayEquals(new Integer[]{0}, result);
 }
+    @Test
+    void notEmptyBadge() {
+        Elevator elevator = new Elevator("f");
+        Integer[] result = elevator.activeButtons(0);
+        assertArrayEquals(new Integer[]{0,10}, result);
+    }
 }

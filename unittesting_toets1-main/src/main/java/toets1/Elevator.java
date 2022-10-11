@@ -12,10 +12,13 @@ public Elevator(String badge){
     this.badge = badge;
 }
     public Integer[] activeButtons(int currentLevel) {
+
         List<Integer> List = new ArrayList<>();
-        if(badge == null){
-            List.add(0);
+        List.add(0);
+        if(badge != null){
+            List.add(10);
         }
+
         Integer[] activebuttons = List.toArray(new Integer[0]);
         return activebuttons;
 }
