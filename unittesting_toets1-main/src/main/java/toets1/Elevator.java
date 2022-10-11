@@ -15,16 +15,25 @@ public Elevator(String badge){
     public Integer[] activeButtons(int currentLevel) {
 
         List<Integer> List = new ArrayList<>();
-        List.add(0);
-
-        if(badge != null){
+        if(badge != null && badge.equals("S")){
+            for(int i = -2; i<=10;i++){
+                if(!List.contains(i)){
+                List.add(i);
+            }
+        }
+        }
+        if(badge != null && !badge.equals("S")){
+            List.add(0);
             List.add(10);
         }
 
-        for(int i=0 ; i<List.size();i++){
+        for(int i=0 ; i <List.size();i++){
             if(List.get(i) == currentLevel && List.size()>1){
                 List.remove(i);
             }
+        }
+        if(!List.contains(0) && List.isEmpty()){
+            List.add(0);
         }
         Integer[] activebuttons = List.toArray(new Integer[0]);
         return activebuttons;
