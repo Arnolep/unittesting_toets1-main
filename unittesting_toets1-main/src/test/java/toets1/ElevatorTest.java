@@ -21,8 +21,8 @@ void emptyBadge() {
     @Test
     void notEmptyBadgeNotInLobby() {
         Elevator elevator = new Elevator("f");
-        Integer[] result = elevator.activeButtons(2);
-        assertArrayEquals(new Integer[]{0,10}, result);
+        Integer[] result = elevator.activeButtons(10);
+        assertArrayEquals(new Integer[]{0}, result);
     }
     @Test
     void Staff() {
@@ -35,5 +35,11 @@ void emptyBadge() {
         Elevator elevator = new Elevator("S");
         Integer[] result = elevator.activeButtons(10);
         assertArrayEquals(new Integer[]{-2,-1,0,1,2,3,4,5,6,7,8,9}, result);
+    }
+    @Test
+    void WrongfloorNoBadge(){
+        Elevator elevator = new Elevator();
+        Integer[] result = elevator.activeButtons(7);
+        assertEquals(null, result);
     }
 }

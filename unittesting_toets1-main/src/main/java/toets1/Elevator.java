@@ -35,6 +35,13 @@ public Elevator(String badge){
         if(!List.contains(0) && List.isEmpty()){
             List.add(0);
         }
+        if(badge==null){
+            for(int i = 0; i<List.size();i++){
+                if(i!=0){
+                   return null;
+                }
+            }
+        }
         Integer[] activebuttons = List.toArray(new Integer[0]);
         return activebuttons;
 }
