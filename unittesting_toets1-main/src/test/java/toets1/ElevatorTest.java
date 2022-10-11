@@ -16,6 +16,7 @@ void emptyBadge() {
     void notEmptyBadge() {
         Elevator elevator = new Elevator("f");
         Integer[] result = elevator.activeButtons(0);
-        assertArrayEquals(new Integer[]{0,10}, result);
+        assertArrayEquals(new Integer[]{10}, result);
     }
+
 }
