@@ -8,15 +8,21 @@ class ElevatorTest {
 
 @Test
 void emptyBadge() {
-    Elevator elevator = new Elevator(null);
+    Elevator elevator = new Elevator();
     Integer[] result = elevator.activeButtons(0);
     assertArrayEquals(new Integer[]{0}, result);
 }
     @Test
-    void notEmptyBadge() {
+    void notEmptyBadgeInLobby() {
         Elevator elevator = new Elevator("f");
         Integer[] result = elevator.activeButtons(0);
         assertArrayEquals(new Integer[]{10}, result);
+    }
+    @Test
+    void notEmptyBadgeNotInLobby() {
+        Elevator elevator = new Elevator("f");
+        Integer[] result = elevator.activeButtons(2);
+        assertArrayEquals(new Integer[]{0,10}, result);
     }
 
 }

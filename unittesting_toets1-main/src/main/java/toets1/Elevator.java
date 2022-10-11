@@ -3,6 +3,7 @@ package toets1;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Elevator {
     private String badge = null;
@@ -19,6 +20,7 @@ public Elevator(String badge){
         if(badge != null){
             List.add(10);
         }
+
         for(int i=0 ; i<List.size();i++){
             if(List.get(i) == currentLevel && List.size()>1){
                 List.remove(i);
